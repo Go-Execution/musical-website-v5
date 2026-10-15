@@ -17,9 +17,9 @@ export default function AudioDock({ isPlaying, onTogglePlay, currentTime, durati
   return (
     <aside
       aria-label="Floating audio player"
-      className="fixed bottom-5 right-5 z-40 max-w-sm w-[calc(100vw-2.5rem)] sm:w-80 transition-all duration-300"
+      className="fixed bottom-3.5 sm:bottom-5 left-3 right-3 sm:left-auto sm:right-5 z-40 max-w-sm sm:w-80 transition-all duration-300"
     >
-      <div className="rounded-2xl bg-[#0e0d0b]/95 backdrop-blur-xl border border-[#c8a97e]/35 shadow-piano-depth p-3.5 text-[#f5f2eb]">
+      <div className="rounded-2xl bg-[#0e0d0b]/95 backdrop-blur-xl border border-[#c8a97e]/35 shadow-piano-depth p-3 sm:p-3.5 text-[#f5f2eb]">
         
         {/* Main Dock Bar */}
         <div className="flex items-center justify-between space-x-3">

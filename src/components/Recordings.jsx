@@ -32,7 +32,7 @@ export default function Recordings({ isPlaying, onTogglePlay, currentTime, durat
         </h2>
 
         {/* Featured Album Showcase Card */}
-        <div className="rounded-3xl bg-[#0e0d0b] border border-[#c8a97e]/20 p-6 sm:p-10 lg:p-12 shadow-piano-depth relative overflow-hidden mb-12">
+        <div className="rounded-2xl sm:rounded-3xl bg-[#0e0d0b] border border-[#c8a97e]/20 p-5 sm:p-10 lg:p-12 shadow-piano-depth relative overflow-hidden mb-12">
           
           {/* Subtle Ambient Glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#c8a97e]/5 rounded-full blur-[90px] pointer-events-none" />
@@ -43,7 +43,7 @@ export default function Recordings({ isPlaying, onTogglePlay, currentTime, durat
             <div className="lg:col-span-5 relative group cursor-pointer" onClick={onTogglePlay}>
               
               {/* Sliding Vinyl Record that pops out on hover */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-1/4 w-[85%] aspect-square rounded-full bg-[#0a0a0a] border-4 border-[#1a1a1a] shadow-2xl flex items-center justify-center transition-all duration-700 ease-out transform group-hover:translate-x-20 sm:group-hover:translate-x-28 group-hover:rotate-180 z-0">
+              <div className="absolute top-1/2 -translate-y-1/2 left-1/4 w-[85%] aspect-square rounded-full bg-[#0a0a0a] border-4 border-[#1a1a1a] shadow-2xl flex items-center justify-center transition-all duration-700 ease-out transform group-hover:translate-x-12 sm:group-hover:translate-x-28 group-hover:rotate-180 z-0">
                 {/* Vinyl Grooves Texture */}
                 <div className="w-[85%] h-[85%] rounded-full border border-white/5 flex items-center justify-center">
                   <div className="w-[70%] h-[70%] rounded-full border border-white/5 flex items-center justify-center">

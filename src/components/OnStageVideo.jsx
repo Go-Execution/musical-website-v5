@@ -60,19 +60,19 @@ export default function OnStageVideo() {
               {/* Center Play Button with Pulsing Gold Rings */}
               <button
                 onClick={() => setIsPlayingVideo(true)}
-                className="absolute inset-0 m-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#c8a97e]/90 text-[#080706] flex items-center justify-center shadow-gold-glow hover:bg-[#dfc299] hover:scale-110 active:scale-95 transition-all duration-300 z-10 group/btn focus:outline-none"
+                className="absolute inset-0 m-auto w-14 h-14 sm:w-24 sm:h-24 rounded-full bg-[#c8a97e]/90 text-[#080706] flex items-center justify-center shadow-gold-glow hover:bg-[#dfc299] hover:scale-110 active:scale-95 transition-all duration-300 z-10 group/btn focus:outline-none"
                 aria-label="Play concert video"
               >
-                <Play className="w-8 h-8 sm:w-10 sm:h-10 fill-current ml-1" />
+                <Play className="w-6 h-6 sm:w-10 sm:h-10 fill-current ml-0.5 sm:ml-1" />
               </button>
 
               {/* Video Info Watermark Overlay */}
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white/90">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 flex items-center justify-between text-white/90">
                 <div>
-                  <h4 className="font-serif text-lg sm:text-2xl text-[#f5f2eb] drop-shadow-md">
+                  <h4 className="font-serif text-sm sm:text-2xl text-[#f5f2eb] drop-shadow-md">
                     {video.titleVideo}
                   </h4>
-                  <p className="font-sans text-xs tracking-wider text-[#dfc299] mt-0.5">
+                  <p className="font-sans text-[10px] sm:text-xs tracking-wider text-[#dfc299] mt-0.5">
                     {video.channel}
                   </p>
                 </div>

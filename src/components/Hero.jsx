@@ -32,22 +32,22 @@ export default function Hero({ isPlaying, onTogglePlay }) {
         </div>
 
         {/* Lyrical Tagline Quote */}
-        <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-[#f5f2eb] font-normal tracking-wide max-w-2xl leading-relaxed mb-6 drop-shadow-md">
+        <p className="font-serif italic text-lg sm:text-2xl md:text-3xl text-[#f5f2eb] font-normal tracking-wide max-w-2xl leading-relaxed mb-6 px-2 drop-shadow-md">
           “{tagline}”
         </p>
 
         {/* Signature & Nameplate */}
-        <div className="flex flex-col items-center select-none my-2">
-          <h1 className="font-script text-7xl sm:text-8xl md:text-9xl text-gold-gradient leading-none tracking-normal drop-shadow-xl transform -rotate-1">
+        <div className="flex flex-col items-center select-none my-2 w-full">
+          <h1 className="font-script text-6xl sm:text-8xl md:text-9xl text-gold-gradient leading-none tracking-normal drop-shadow-xl transform -rotate-1">
             Christie
           </h1>
-          <p className="font-cinzel text-sm sm:text-base md:text-lg tracking-[0.45em] text-[#dfc299] uppercase -mt-2 sm:-mt-4 font-semibold">
+          <p className="font-cinzel text-xs sm:text-base md:text-lg tracking-[0.35em] sm:tracking-[0.45em] text-[#dfc299] uppercase -mt-2 sm:-mt-4 font-semibold">
             KANSKA
           </p>
         </div>
 
         {/* Roles Subtitle */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 my-7 text-[11px] sm:text-xs md:text-sm font-sans tracking-[0.26em] text-[#d6d1c7]/90 uppercase">
+        <div className="flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-3 gap-y-1.5 my-6 sm:my-7 text-[10px] sm:text-xs md:text-sm font-sans tracking-[0.16em] sm:tracking-[0.26em] text-[#d6d1c7]/90 uppercase max-w-lg">
           {roles.map((role, idx) => (
             <React.Fragment key={role}>
               <span className="hover:text-[#dfc299] transition-colors">{role}</span>

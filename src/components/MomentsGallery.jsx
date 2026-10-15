@@ -30,14 +30,14 @@ export default function MomentsGallery({ onOpenLightbox }) {
             </h2>
           </div>
 
-          <div className="flex items-center space-x-6 mt-6 md:mt-0">
+          <div className="flex items-center space-x-6 mt-6 md:mt-0 w-full md:w-auto overflow-x-auto">
             {/* Category Pills */}
-            <div className="flex items-center space-x-2 bg-[#151310] p-1 rounded-full border border-white/5">
+            <div className="flex items-center space-x-1.5 sm:space-x-2 bg-[#151310] p-1 rounded-full border border-white/5 overflow-x-auto scrollbar-none flex-nowrap">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-3.5 py-1 text-xs font-sans tracking-[0.16em] uppercase rounded-full transition-all duration-300 ${
+                  className={`px-3 sm:px-3.5 py-1 text-[11px] sm:text-xs font-sans tracking-[0.14em] sm:tracking-[0.16em] uppercase rounded-full transition-all duration-300 flex-shrink-0 ${
                     filter === cat
                       ? 'bg-[#c8a97e] text-[#080706] font-semibold shadow-gold-glow-subtle'
                       : 'text-[#8f8a80] hover:text-[#f5f2eb]'

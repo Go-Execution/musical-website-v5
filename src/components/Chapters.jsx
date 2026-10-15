@@ -105,33 +105,36 @@ export default function Chapters() {
                 href={ch.target}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className={`group py-8 sm:py-10 flex flex-col md:flex-row md:items-center justify-between transition-all duration-300 relative px-4 sm:px-6 rounded-2xl ${
+                onClick={() => setHoveredIdx(hoveredIdx === idx ? null : idx)}
+                className={`group py-6 sm:py-8 lg:py-10 flex flex-col md:flex-row md:items-center justify-between transition-all duration-300 relative px-3 sm:px-6 rounded-2xl ${
                   isHovered ? 'bg-[#151310]/80 shadow-piano-depth' : 'hover:bg-[#151310]/40'
                 }`}
               >
                 {/* Left Title with Roman Index */}
-                <div className="flex items-center space-x-6 sm:space-x-8 mb-3 md:mb-0">
-                  <span className={`font-cinzel text-xs tracking-[0.2em] transition-colors ${
-                    isHovered ? 'text-[#dfc299] font-bold' : 'text-[#8f8a80]'
-                  }`}>
-                    {ch.number}
-                  </span>
+                <div className="flex items-center justify-between md:justify-start space-x-4 sm:space-x-8 mb-2 md:mb-0 w-full md:w-auto">
+                  <div className="flex items-center space-x-3 sm:space-x-6">
+                    <span className={`font-cinzel text-xs tracking-[0.2em] transition-colors ${
+                      isHovered ? 'text-[#dfc299] font-bold' : 'text-[#8f8a80]'
+                    }`}>
+                      {ch.number}
+                    </span>
 
-                  <h3 className={`font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl transition-all duration-300 ${
-                    isHovered ? 'text-[#dfc299] translate-x-2' : 'text-[#f5f2eb]'
-                  }`}>
-                    {ch.title}
-                  </h3>
+                    <h3 className={`font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl transition-all duration-300 ${
+                      isHovered ? 'text-[#dfc299] translate-x-1 sm:translate-x-2' : 'text-[#f5f2eb]'
+                    }`}>
+                      {ch.title}
+                    </h3>
+                  </div>
 
-                  {/* Pop-Out Album Thumbnail Pill on Hover (Visible on Mobile & Tablet, and inline reinforcement on Desktop) */}
+                  {/* Pop-Out Album Thumbnail on Hover / Tap */}
                   <div
-                    className={`transition-all duration-500 ease-out overflow-hidden flex items-center space-x-3 ${
+                    className={`transition-all duration-500 ease-out overflow-hidden flex items-center space-x-2 ${
                       isHovered
-                        ? 'opacity-100 max-w-xs scale-100 ml-4'
+                        ? 'opacity-100 max-w-[80px] sm:max-w-xs scale-100 ml-2 sm:ml-4'
                         : 'opacity-0 max-w-0 scale-75 pointer-events-none'
                     }`}
                   >
-                    <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden border-2 border-[#c8a97e] shadow-gold-glow flex-shrink-0 bg-[#0e0d0b]">
+                    <div className="relative w-11 h-11 sm:w-16 sm:h-16 rounded-xl overflow-hidden border-2 border-[#c8a97e] shadow-gold-glow flex-shrink-0 bg-[#0e0d0b]">
                       <img
                         src={ch.image}
                         alt={ch.title}
@@ -139,22 +142,31 @@ export default function Chapters() {
                       />
                       {ch.id === 'music' && (
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                          <Disc3 className="w-5 h-5 text-[#dfc299] animate-spin" style={{ animationDuration: '6s' }} />
+                          <Disc3 className="w-4 h-4 sm:w-5 sm:h-5 text-[#dfc299] animate-spin" style={{ animationDuration: '6s' }} />
                         </div>
                       )}
                     </div>
                   </div>
+
+                  {/* Arrow for mobile in header line */}
+                  <div className={`md:hidden w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                    isHovered
+                      ? 'border-[#c8a97e] bg-[#c8a97e] text-[#080706] shadow-gold-glow-subtle'
+                      : 'border-[#c8a97e]/25 text-[#c8a97e]'
+                  }`}>
+                    <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
+                  </div>
                 </div>
 
-                {/* Right Description & Arrow */}
-                <div className="flex items-center justify-between md:justify-end space-x-6 lg:space-x-12 pl-12 md:pl-0">
+                {/* Right Description & Desktop Arrow */}
+                <div className="flex items-center justify-between md:justify-end space-x-4 lg:space-x-12 pl-7 sm:pl-9 md:pl-0">
                   <p className={`font-sans text-xs sm:text-sm transition-colors max-w-sm ${
                     isHovered ? 'text-[#f5f2eb]' : 'text-[#8f8a80]'
                   }`}>
                     {ch.desc}
                   </p>
 
-                  <div className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                  <div className={`hidden md:flex w-11 h-11 rounded-full border items-center justify-center transition-all duration-300 ${
                     isHovered
                       ? 'border-[#c8a97e] bg-[#c8a97e] text-[#080706] scale-110 shadow-gold-glow-subtle'
                       : 'border-[#c8a97e]/25 text-[#c8a97e] group-hover:border-[#c8a97e]/60'

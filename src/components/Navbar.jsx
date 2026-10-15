@@ -41,13 +41,24 @@ export default function Navbar({ cartCount, onOpenCart, isPlaying, onTogglePlay,
     { label: 'CONTACT', href: '#contact' },
   ];
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? 'bg-[#080706]/92 backdrop-blur-md border-b border-[#c8a97e]/15 py-3 shadow-piano-depth'
-            : 'bg-gradient-to-b from-[#080706]/90 via-[#080706]/60 to-transparent py-5'
+            : 'bg-gradient-to-b from-[#080706]/90 via-[#080706]/60 to-transparent py-4 sm:py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -86,7 +97,7 @@ export default function Navbar({ cartCount, onOpenCart, isPlaying, onTogglePlay,
           </nav>
 
           {/* Right Action Icons */}
-          <div className="flex items-center space-x-3 sm:space-x-5">
+          <div className="flex items-center space-x-2 sm:space-x-5">
             {/* Audio Toggle Pill */}
             <button
               onClick={onTogglePlay}
@@ -148,53 +159,60 @@ export default function Navbar({ cartCount, onOpenCart, isPlaying, onTogglePlay,
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu with Safe-Area & Overflow Scroll */}
       <div
-        className={`fixed inset-0 z-40 bg-[#080706]/98 backdrop-blur-xl lg:hidden transition-all duration-500 flex flex-col justify-center px-8 ${
+        className={`fixed inset-0 z-50 bg-[#080706]/98 backdrop-blur-2xl lg:hidden transition-all duration-300 overflow-y-auto px-6 py-12 flex flex-col justify-between ${
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className="space-y-6 text-center">
-          <div className="mb-6 flex flex-col items-center">
-            <span className="font-script text-5xl text-[#dfc299]">Christie</span>
-            <span className="font-cinzel text-xs tracking-[0.4em] text-[#c8a97e] uppercase -mt-1 font-semibold">KANSKA</span>
+        <div className="flex items-center justify-between pb-6 border-b border-white/10">
+          <div className="flex flex-col">
+            <span className="font-script text-4xl text-[#dfc299]">Christie</span>
+            <span className="font-cinzel text-[9px] tracking-[0.4em] text-[#c8a97e] uppercase -mt-1 font-semibold">KANSKA</span>
           </div>
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-2 rounded-full border border-white/10 text-[#d6d1c7] hover:text-[#dfc299] focus:outline-none"
+            aria-label="Close menu"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
 
-          <div className="flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-lg tracking-[0.25em] font-serif text-[#f5f2eb] hover:text-[#dfc299] transition-colors py-1"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="pt-8 border-t border-[#c8a97e]/20 flex flex-col items-center space-y-4">
-            <button
-              onClick={() => {
-                onTogglePlay();
-                setMobileMenuOpen(false);
-              }}
-              className="w-full max-w-xs py-3 rounded-full bg-[#151310] border border-[#c8a97e]/30 text-xs tracking-[0.2em] text-[#dfc299] uppercase flex items-center justify-center space-x-2"
+        <div className="my-auto py-8 flex flex-col space-y-4 text-center">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base tracking-[0.25em] font-serif text-[#f5f2eb] hover:text-[#dfc299] transition-colors py-2 active:bg-white/5 rounded-lg"
             >
-              <Volume2 className="w-4 h-4 text-[#c8a97e]" />
-              <span>{isPlaying ? "Pause Preview" : "Play Album Preview"}</span>
-            </button>
+              {link.label}
+            </a>
+          ))}
+        </div>
 
-            <button
-              onClick={() => {
-                onOpenContact();
-                setMobileMenuOpen(false);
-              }}
-              className="w-full max-w-xs py-3 rounded-full bg-[#c8a97e] text-[#080706] text-xs font-semibold tracking-[0.2em] uppercase"
-            >
-              Get In Touch
-            </button>
-          </div>
+        <div className="pt-6 border-t border-[#c8a97e]/20 flex flex-col items-center space-y-3">
+          <button
+            onClick={() => {
+              onTogglePlay();
+              setMobileMenuOpen(false);
+            }}
+            className="w-full py-3.5 rounded-full bg-[#151310] border border-[#c8a97e]/30 text-xs tracking-[0.2em] text-[#dfc299] uppercase flex items-center justify-center space-x-2 active:scale-98 transition-transform"
+          >
+            <Volume2 className="w-4 h-4 text-[#c8a97e]" />
+            <span>{isPlaying ? "Pause Preview" : "Play Album Preview"}</span>
+          </button>
+
+          <button
+            onClick={() => {
+              onOpenContact();
+              setMobileMenuOpen(false);
+            }}
+            className="w-full py-3.5 rounded-full bg-[#c8a97e] text-[#080706] text-xs font-semibold tracking-[0.2em] uppercase active:scale-98 transition-transform"
+          >
+            Get In Touch
+          </button>
         </div>
       </div>
     </>

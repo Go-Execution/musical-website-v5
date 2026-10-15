@@ -123,11 +123,11 @@ export default function Footer() {
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Your email address"
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#0e0d0b] border border-[#c8a97e]/20 text-xs text-[#f5f2eb] placeholder:text-[#8f8a80]/50 focus:outline-none focus:border-[#c8a97e] transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#0e0d0b] border border-[#c8a97e]/20 text-base sm:text-xs text-[#f5f2eb] placeholder:text-[#8f8a80]/50 focus:outline-none focus:border-[#c8a97e] transition-colors"
                 />
                 <button
                   type="submit"
-                  className="w-full py-2.5 rounded-xl bg-[#c8a97e] text-[#080706] text-xs font-sans tracking-[0.2em] font-semibold uppercase hover:bg-[#dfc299] transition-colors shadow-gold-glow-subtle flex items-center justify-center space-x-1"
+                  className="w-full py-3 sm:py-2.5 rounded-xl bg-[#c8a97e] text-[#080706] text-xs font-sans tracking-[0.2em] font-semibold uppercase hover:bg-[#dfc299] transition-colors shadow-gold-glow-subtle flex items-center justify-center space-x-1 active:scale-98"
                 >
                   <span>JOIN THE LIST</span>
                   <ArrowRight className="w-3.5 h-3.5" />

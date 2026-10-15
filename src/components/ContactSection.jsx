@@ -52,16 +52,16 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch max-w-5xl mx-auto">
           
           {/* Direct Details Card */}
-          <div className="lg:col-span-4 rounded-3xl bg-[#0e0d0b] border border-[#c8a97e]/20 p-8 flex flex-col justify-between shadow-piano-depth">
+          <div className="lg:col-span-4 rounded-2xl sm:rounded-3xl bg-[#0e0d0b] border border-[#c8a97e]/20 p-6 sm:p-8 flex flex-col justify-between shadow-piano-depth">
             <div>
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <span className="font-script text-4xl text-[#dfc299]">Christie</span>
                 <span className="font-cinzel text-[10px] tracking-[0.35em] text-[#c8a97e] block uppercase font-semibold">
                   ATELIER &amp; STUDIO
                 </span>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-5 sm:space-y-6">
                 <div className="flex items-start space-x-3.5">
                   <Mail className="w-4 h-4 text-[#c8a97e] mt-1 flex-shrink-0" />
                   <div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/5">
+            <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-white/5">
               <span className="text-[10px] font-sans tracking-widest text-[#8f8a80] uppercase block mb-1">
                 Response Time
               </span>
@@ -105,7 +105,7 @@ export default function ContactSection() {
           </div>
 
           {/* Interactive Form */}
-          <div className="lg:col-span-8 rounded-3xl bg-[#0e0d0b] border border-[#c8a97e]/20 p-8 sm:p-10 shadow-piano-depth">
+          <div className="lg:col-span-8 rounded-2xl sm:rounded-3xl bg-[#0e0d0b] border border-[#c8a97e]/20 p-6 sm:p-10 shadow-piano-depth">
             {submitted ? (
               <div className="py-12 flex flex-col items-center text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-[#c8a97e]/15 border border-[#c8a97e] flex items-center justify-center text-[#dfc299] shadow-gold-glow">
@@ -128,8 +128,8 @@ export default function ContactSection() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-[11px] font-sans tracking-widest uppercase text-[#8f8a80] mb-2">
                       Your Name *
@@ -140,7 +140,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Elena Rostova"
-                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40"
+                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-base sm:text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40"
                     />
                   </div>
 
@@ -154,12 +154,12 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="elena@example.com"
-                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40"
+                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-base sm:text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-[11px] font-sans tracking-widest uppercase text-[#8f8a80] mb-2">
                       Phone Number (Optional)
@@ -169,7 +169,7 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+1 (555) 000-0000"
-                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40"
+                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-base sm:text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40"
                     />
                   </div>
 
@@ -180,7 +180,7 @@ export default function ContactSection() {
                     <select
                       value={formData.reason}
                       onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-sm focus:outline-none focus:border-[#c8a97e] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-base sm:text-sm focus:outline-none focus:border-[#c8a97e] transition-colors"
                     >
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Concert & Performance Booking">Concert &amp; Performance Booking</option>
@@ -201,7 +201,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about your event, project, or learning goals..."
-                    className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40 resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-[#151310] border border-[#c8a97e]/20 text-[#f5f2eb] text-base sm:text-sm focus:outline-none focus:border-[#c8a97e] transition-colors placeholder:text-[#8f8a80]/40 resize-none"
                   />
                 </div>
 

@@ -31,7 +31,7 @@ export default function Timeline({ isPlaying, onTogglePlay }) {
             </h2>
           </div>
 
-          <div className="flex items-center space-x-4 mt-6 md:mt-0">
+          <div className="flex items-center justify-between sm:justify-start space-x-4 mt-6 md:mt-0 w-full md:w-auto">
             {/* Audio Dock Status Pill */}
             <button
               onClick={onTogglePlay}
@@ -44,7 +44,7 @@ export default function Timeline({ isPlaying, onTogglePlay }) {
             </button>
 
             {/* Slider Controls */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 ml-auto sm:ml-0">
               <button
                 onClick={() => scroll('left')}
                 className="w-10 h-10 rounded-full border border-[#c8a97e]/30 bg-[#151310] text-[#c8a97e] hover:border-[#c8a97e] hover:bg-[#c8a97e] hover:text-[#080706] flex items-center justify-center transition-all duration-300 focus:outline-none"
@@ -66,7 +66,7 @@ export default function Timeline({ isPlaying, onTogglePlay }) {
         {/* Horizontal Timeline Track */}
         <div
           ref={scrollContainerRef}
-          className="flex space-x-6 sm:space-x-8 overflow-x-auto pb-8 pt-2 scrollbar-none snap-x snap-mandatory"
+          className="flex space-x-4 sm:space-x-8 overflow-x-auto pb-8 pt-2 scrollbar-none snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {timeline.map((item, idx) => (
