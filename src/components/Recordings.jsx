@@ -39,21 +39,48 @@ export default function Recordings({ isPlaying, onTogglePlay, currentTime, durat
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
-            {/* Album Cover Art */}
-            <div className="lg:col-span-5 relative group">
-              <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden border border-[#c8a97e]/30 shadow-2xl">
+            {/* Album Cover Art with 3D Pop-Out & Sliding Vinyl */}
+            <div className="lg:col-span-5 relative group cursor-pointer" onClick={onTogglePlay}>
+              
+              {/* Sliding Vinyl Record that pops out on hover */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-1/4 w-[85%] aspect-square rounded-full bg-[#0a0a0a] border-4 border-[#1a1a1a] shadow-2xl flex items-center justify-center transition-all duration-700 ease-out transform group-hover:translate-x-20 sm:group-hover:translate-x-28 group-hover:rotate-180 z-0">
+                {/* Vinyl Grooves Texture */}
+                <div className="w-[85%] h-[85%] rounded-full border border-white/5 flex items-center justify-center">
+                  <div className="w-[70%] h-[70%] rounded-full border border-white/5 flex items-center justify-center">
+                    <div className="w-[50%] h-[50%] rounded-full border border-white/10 flex items-center justify-center">
+                      {/* Center Label */}
+                      <div className="w-16 h-16 rounded-full bg-[#c8a97e] flex flex-col items-center justify-center text-[#080706] shadow-inner text-center p-1">
+                        <span className="font-cinzel text-[7px] font-bold tracking-widest leading-none">LE RÊVE</span>
+                        <span className="text-[6px] font-sans font-semibold tracking-wider">CHRISTIE</span>
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#080706] mt-0.5" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Album Jacket / Cover (Pops out in 3D on hover) */}
+              <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden border-2 border-[#c8a97e]/40 shadow-2xl z-10 transition-all duration-500 ease-out transform group-hover:scale-105 group-hover:-translate-y-2 group-hover:-rotate-2 group-hover:shadow-[0_30px_70px_rgba(200,169,126,0.35)] bg-[#0e0d0b]">
                 <img
                   src={album.cover}
                   alt={album.coverAlt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover filter contrast-[1.08] brightness-[1.02] transition-transform duration-700"
                 />
                 
-                {/* Vinyl Record Peeking Effect */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 opacity-70 pointer-events-none" />
+                {/* Gloss / Sheen Highlight */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/15 opacity-70 group-hover:opacity-90 transition-opacity" />
+
+                {/* Floating "Click to Listen" Pop-out Tag */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                  <div className="px-5 py-2.5 rounded-full bg-[#080706]/90 border border-[#c8a97e] text-[#dfc299] text-xs font-sans tracking-widest uppercase font-semibold shadow-gold-glow flex items-center space-x-2 transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                    {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current" />}
+                    <span>{isPlaying ? 'PAUSE PREVIEW' : 'CLICK TO PREVIEW'}</span>
+                  </div>
+                </div>
               </div>
 
               {/* Disc Badge */}
-              <div className="absolute -bottom-3 -right-3 sm:-right-4 bg-[#151310] border border-[#c8a97e]/30 rounded-full p-3 shadow-xl flex items-center space-x-2">
+              <div className="absolute -bottom-3 -right-3 sm:-right-4 bg-[#151310] border border-[#c8a97e]/40 rounded-full p-3 shadow-xl flex items-center space-x-2 z-20 group-hover:scale-110 group-hover:border-[#c8a97e] transition-all duration-300">
                 <Disc3 className={`w-5 h-5 text-[#c8a97e] ${isPlaying ? 'animate-spin' : ''}`} style={{ animationDuration: '6s' }} />
                 <span className="text-[10px] font-cinzel tracking-widest text-[#dfc299] uppercase font-semibold pr-1">
                   180g Vinyl &amp; Digital

@@ -24,8 +24,25 @@ export default function AudioDock({ isPlaying, onTogglePlay, currentTime, durati
         {/* Main Dock Bar */}
         <div className="flex items-center justify-between space-x-3">
           
-          {/* Vinyl & Play Toggle */}
-          <div className="flex items-center space-x-3 min-w-0">
+          {/* Vinyl & Play Toggle with Pop-Out Album Thumbnail on Hover */}
+          <div className="flex items-center space-x-3 min-w-0 relative group/player">
+            
+            {/* Pop-Out Album Art Tooltip Card on Hover */}
+            <div className="absolute -top-32 left-0 pointer-events-none opacity-0 group-hover/player:opacity-100 transform translate-y-2 group-hover/player:translate-y-0 scale-95 group-hover/player:scale-100 transition-all duration-300 z-50">
+              <div className="w-28 h-28 rounded-xl overflow-hidden border-2 border-[#c8a97e] shadow-[0_15px_35px_rgba(0,0,0,0.9),0_0_20px_rgba(200,169,126,0.3)] bg-[#151310] relative">
+                <img
+                  src="/assets/images/le-reve-cover.jpg"
+                  alt="Le Rêve – The Dream"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-2">
+                  <span className="font-cinzel text-[8px] text-[#dfc299] font-bold tracking-widest uppercase">
+                    Le Rêve (2019)
+                  </span>
+                </div>
+              </div>
+            </div>
+
             <button
               onClick={onTogglePlay}
               className="w-10 h-10 rounded-full bg-[#c8a97e] text-[#080706] flex items-center justify-center flex-shrink-0 shadow-gold-glow-subtle hover:bg-[#dfc299] active:scale-95 transition-all focus:outline-none"
@@ -38,10 +55,10 @@ export default function AudioDock({ isPlaying, onTogglePlay, currentTime, durati
               )}
             </button>
 
-            <div className="min-w-0">
+            <div className="min-w-0 cursor-pointer">
               <div className="flex items-center space-x-1.5">
                 <span className={`w-1.5 h-1.5 rounded-full ${isPlaying ? 'bg-emerald-400 animate-pulse' : 'bg-[#c8a97e]'}`} />
-                <p className="font-serif text-xs text-[#f5f2eb] truncate font-medium">
+                <p className="font-serif text-xs text-[#f5f2eb] truncate font-medium group-hover/player:text-[#dfc299] transition-colors">
                   Le Rêve – The Dream
                 </p>
               </div>

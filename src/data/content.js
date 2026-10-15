@@ -27,6 +27,8 @@ export const siteData = {
       title: "Music",
       desc: "Recordings, original songs and Latin jazz",
       target: "#recordings",
+      image: "/assets/images/le-reve-cover.jpg",
+      subtitle: "Le Rêve — The Dream (2019)",
       tags: ["Latin Jazz", "Bossa Nova", "Fusion", "Original Compositions"]
     },
     {
@@ -35,6 +37,8 @@ export const siteData = {
       title: "Performance",
       desc: "Carnegie Hall, international tours and live concerts",
       target: "#on-stage",
+      image: "/assets/images/christie-live.jpg",
+      subtitle: "Carnegie Hall & International Tours",
       tags: ["Solo Vocal", "Concert Piano", "Jazz Ensembles", "Touring"]
     },
     {
@@ -43,6 +47,8 @@ export const siteData = {
       title: "Education",
       desc: "Piano, voice, choir and children's music",
       target: "#education",
+      image: "/assets/images/christie-kanska-teaching-1.webp",
+      subtitle: "Steinway Piano & Voice Masterclasses",
       tags: ["RCM Curriculum", "Steinway Studio", "Children's Choirs", "Masterclasses"]
     },
     {
@@ -51,6 +57,8 @@ export const siteData = {
       title: "Song Bird",
       desc: "Mindfulness, kindness, imagination and nature",
       target: "#songbird",
+      image: "/assets/images/christie-kanska-children-choir.webp",
+      subtitle: "Original Children's Story & Suite",
       tags: ["Children's Story", "Original Songs", "Mindfulness", "Interactive"]
     },
     {
@@ -59,6 +67,8 @@ export const siteData = {
       title: "ZCK Studio",
       desc: "Recording, production and arrangement",
       target: "#contact",
+      image: "/assets/images/christie-kanska-gallery-3.webp",
+      subtitle: "ZCK Recording Studios New York",
       tags: ["Sound Engineering", "Arrangements", "Voice Tracking", "Production"]
     }
   ],
