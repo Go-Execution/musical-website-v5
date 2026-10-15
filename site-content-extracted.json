@@ -1,0 +1,333 @@
+{
+  "about": {
+    "heroTagline": "Music that opens the heart and teaches it to sing",
+    "name": "Christie Kanska",
+    "roles": [
+      "VOCALIST",
+      "PIANIST",
+      "COMPOSER",
+      "MUSIC EDUCATOR"
+    ],
+    "bioHead": "A life in music, from Yerevan to Carnegie Hall",
+    "bioP1": "Christie Kanska’s work as vocalist, pianist, composer and educator is carried by honesty and artistic mastery — and a love for people, nature and life that runs through her original music and poetic lyrics.",
+    "bioP2": "Born in Yerevan, Armenia, she began the piano at seven, taught voice in Thessaloniki and graduated from Berklee College of Music on scholarship. She has sung at Carnegie Hall, toured her album “Le Rêve – The Dream” across India, and is a Recording Academy member, GRAMMY U Mentor, Steinway & Sons educator and RCM-certified teacher.",
+    "bioP3": "She is the founder of ZCK Music Academy & Recording Studios and the creator of Song Bird."
+  },
+  "credentials": [
+    {
+      "institution": "Berklee College of Music",
+      "role": "Graduate"
+    },
+    {
+      "institution": "Recording Academy",
+      "role": "Member · GRAMMY U Mentor"
+    },
+    {
+      "institution": "Carnegie Hall",
+      "role": "Performer · NYC Educators"
+    },
+    {
+      "institution": "RCM",
+      "role": "Certified educator"
+    },
+    {
+      "institution": "Steinway & Sons",
+      "role": "Official educator"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "music",
+      "title": "Music",
+      "desc": "Recordings, original songs and Latin jazz",
+      "to": "#music"
+    },
+    {
+      "id": "performance",
+      "title": "Performance",
+      "desc": "Carnegie Hall, international tours and live concerts",
+      "to": "#stage"
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "desc": "Piano, voice, choir and children’s music",
+      "to": "#education"
+    },
+    {
+      "id": "songbird",
+      "title": "Song Bird",
+      "desc": "Mindfulness, kindness, imagination and nature",
+      "to": "#songbird"
+    },
+    {
+      "id": "studio",
+      "title": "ZCK Studio",
+      "desc": "Recording, production and arrangement",
+      "to": "#contact"
+    }
+  ],
+  "album": {
+    "id": "le-reve",
+    "title": "Le Rêve — The Dream",
+    "year": "2019",
+    "label": "LATEST ALBUM · 2019",
+    "desc": "Latin jazz mixed with fusion: Christie’s original instrumental “Le Rêve” and bossa nova standards including Bananeira, Dindi, Triste, Fotografia, No More Blues, One Note Samba and The Girl From Ipanema. Arranged by Zdenek Kansky & Christie.",
+    "credits": "Christie Kanska (vocals, keys), Zdenek Kansky (electric & acoustic guitars, bass, arrangement).",
+    "previewTrack": "Le Rêve - The Dream (preview) - Christie Kanska",
+    "audioSrc": "/assets/audio/le-reve-the-dream-2019.mp3",
+    "links": [
+      {
+        "label": "SPOTIFY",
+        "href": "https://open.spotify.com/album/7odkqThKgoum5Uo6Jk0R0F"
+      },
+      {
+        "label": "APPLE MUSIC",
+        "href": "https://music.apple.com/us/artist/christie-kanska/1451556186"
+      },
+      {
+        "label": "AMAZON",
+        "href": "https://www.amazon.com/dp/B07N8MV5QW"
+      }
+    ],
+    "nextRelease": {
+      "title": "A new single",
+      "status": "COMING SOON",
+      "text": "A new single from Christie is on the way. Join the list to hear it first and be told the moment it’s out.",
+      "action": "BE FIRST TO HEAR IT"
+    }
+  },
+  "moments": [
+    {
+      "id": 1,
+      "title": "Live Vocal Performance",
+      "category": "Performance",
+      "src": "/assets/images/christie-live.jpg",
+      "caption": "Live on stage with jazz trio"
+    },
+    {
+      "id": 2,
+      "title": "Jazz Club Stage",
+      "category": "Live",
+      "src": "/assets/images/christie-kanska-gallery-1.jpg",
+      "caption": "Concert performance with acoustic ensemble"
+    },
+    {
+      "id": 3,
+      "title": "Acoustic Ensemble",
+      "category": "Performance",
+      "src": "/assets/images/banner_shows.jpg",
+      "caption": "Carnegie Hall & festival tours"
+    },
+    {
+      "id": 4,
+      "title": "Studio Recording Sessions",
+      "category": "Studio",
+      "src": "/assets/images/christie-kanska-gallery-3.jpg",
+      "caption": "Vocal tracking & arrangement sessions"
+    },
+    {
+      "id": 5,
+      "title": "Children's Choir Mentorship",
+      "category": "Education",
+      "src": "/assets/images/christie-kanska-children-choir.jpg",
+      "caption": "Brooklyn Children's Choir directing"
+    },
+    {
+      "id": 6,
+      "title": "At the Steinway Grand",
+      "category": "Piano",
+      "src": "/assets/images/christie-kanska-teaching-1.jpg",
+      "caption": "Masterclass piano instruction"
+    }
+  ],
+  "video": {
+    "id": "lsQk0nE9K3E",
+    "title": "On stage",
+    "sub": "PERFORMANCES",
+    "caption": "Live vocal & piano performance by Christie Kanska",
+    "url": "https://www.youtube.com/embed/lsQk0nE9K3E?autoplay=1"
+  },
+  "quote": {
+    "kicker": "EDUCATION",
+    "text": "Music is one of those vocations that gets into your blood and keeps you dreaming throughout your life.",
+    "subtext": "Piano, voice, choir and children’s music, following the Royal Conservatory curriculum — for students of every age, in person and online.",
+    "action": "LESSONS WITH CHRISTIE"
+  },
+  "songbird": {
+    "kicker": "CREATED BY CHRISTIE KANSKA",
+    "title": "Song Bird",
+    "tagline": "A musical journey of mindfulness, kindness, imagination and connection with nature.",
+    "pillars": [
+      {
+        "title": "Mindfulness",
+        "desc": "Listening closely and being present through music."
+      },
+      {
+        "title": "Kindness",
+        "desc": "Songs that open the heart toward others."
+      },
+      {
+        "title": "Imagination",
+        "desc": "Music as a doorway to wonder and creativity."
+      },
+      {
+        "title": "Connection with nature",
+        "desc": "Finding music in the living world around us."
+      }
+    ],
+    "action": "EXPLORE SONG BIRD"
+  },
+  "timeline": [
+    {
+      "year": "Yerevan",
+      "tag": "BEGINNINGS",
+      "text": "Born in Yerevan, Armenia. Begins piano at seven and sings with the National Chorus."
+    },
+    {
+      "year": "1995",
+      "tag": "GREECE",
+      "text": "Vocal faculty at the New Odeon of Thessaloniki and the Filippos Nakas Odeon Conservatory."
+    },
+    {
+      "year": "1997",
+      "tag": "THE STAGE",
+      "text": "Lead singer of her jazz band at festivals in Thessaloniki, European Capital of Culture."
+    },
+    {
+      "year": "2004",
+      "tag": "BERKLEE",
+      "text": "Bachelor of Music in Professional Music, Berklee College of Music, on scholarship."
+    },
+    {
+      "year": "2010",
+      "tag": "NEW YORK",
+      "text": "Founds ZCK Music Academy & Recording Studios in New York."
+    },
+    {
+      "year": "2019",
+      "tag": "LE RÊVE",
+      "text": "Releases “Le Rêve – The Dream” and tours across India."
+    },
+    {
+      "year": "2020",
+      "tag": "RECOGNITION",
+      "text": "Recording Academy member, Steinway & Sons educator, writes “Stay Home”."
+    },
+    {
+      "year": "2023",
+      "tag": "GRAMMY U",
+      "text": "Selected as Recording Academy GRAMMY U Mentor."
+    }
+  ],
+  "coming": [
+    {
+      "title": "New single",
+      "status": "COMING SOON",
+      "note": "Title and date to be announced."
+    },
+    {
+      "title": "Children’s book",
+      "status": "COMING SOON",
+      "note": "A story being brought to life with music."
+    },
+    {
+      "title": "Musical",
+      "status": "IN DEVELOPMENT",
+      "note": "The children’s book, adapted for the stage."
+    },
+    {
+      "title": "Children’s album",
+      "status": "IN PRODUCTION",
+      "note": "Original songs sung by Christie’s Brooklyn children’s choir."
+    }
+  ],
+  "contact": {
+    "kicker": "GET IN TOUCH",
+    "title": "Performances, lessons, production or just hello",
+    "action": "SEND A MESSAGE",
+    "email": "zckmusicproduction1@gmail.com",
+    "phone": "+1 (774) 239-1173",
+    "location": "New York, NY",
+    "socials": [
+      {
+        "name": "Spotify",
+        "href": "https://open.spotify.com/album/7odkqThKgoum5Uo6Jk0R0F"
+      },
+      {
+        "name": "Apple Music",
+        "href": "https://music.apple.com/us/artist/christie-kanska/1451556186"
+      },
+      {
+        "name": "Amazon Music",
+        "href": "https://www.amazon.com/dp/B07N8MV5QW"
+      },
+      {
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@Christie119"
+      },
+      {
+        "name": "Instagram",
+        "href": "https://www.instagram.com/christiekanska/"
+      },
+      {
+        "name": "Facebook",
+        "href": "https://www.facebook.com/christie.kanska"
+      },
+      {
+        "name": "TikTok",
+        "href": "https://www.tiktok.com/@christiekanska"
+      },
+      {
+        "name": "LinkedIn",
+        "href": "https://www.linkedin.com/in/christie-kanska-221a6b2a/"
+      },
+      {
+        "name": "X / Twitter",
+        "href": "https://twitter.com/ChristieKanska"
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "le-reve-vinyl",
+      "name": "Le Rêve – The Dream (Limited Vinyl)",
+      "price": 35,
+      "category": "Music",
+      "image": "/assets/images/le-reve-cover.jpg",
+      "format": "12\" Vinyl LP · 180g Heavyweight"
+    },
+    {
+      "id": "le-reve-cd",
+      "name": "Le Rêve – The Dream (Digipak CD)",
+      "price": 18,
+      "category": "Music",
+      "image": "/assets/images/le-reve-cover.jpg",
+      "format": "Audio CD with 12-page booklet"
+    },
+    {
+      "id": "le-reve-digital",
+      "name": "Le Rêve – The Dream (Hi-Res Digital)",
+      "price": 12,
+      "category": "Digital",
+      "image": "/assets/images/le-reve-cover.jpg",
+      "format": "24-bit 96kHz FLAC + MP3 320kbps"
+    },
+    {
+      "id": "songbird-book",
+      "name": "Song Bird: The Illustrated Book",
+      "price": 24,
+      "category": "Books",
+      "image": "/assets/images/christie-kanska-children-choir.jpg",
+      "format": "Hardcover Children’s Book + Audio companion"
+    },
+    {
+      "id": "vocal-masterclass",
+      "name": "Private Masterclass (60 min)",
+      "price": 120,
+      "category": "Education",
+      "image": "/assets/images/christie-kanska-teaching-1.jpg",
+      "format": "1-on-1 Online or In-Studio Session"
+    }
+  ]
+}

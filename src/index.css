@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #080706;
+  color: #d6d1c7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #080706;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a251e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c8a97e;
+}
+
+/* Luxury Piano String Accent Lines */
+.piano-string {
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 126, 0.25), transparent);
+  height: 1px;
+  width: 100%;
+}
+
+.piano-string-vertical {
+  background: linear-gradient(180deg, transparent, rgba(200, 169, 126, 0.2), transparent);
+  width: 1px;
+}
+
+/* Text Shimmer / Gold Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5f2eb 0%, #dfc299 50%, #c8a97e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-pure {
+  background: linear-gradient(135deg, #dfc299 0%, #c8a97e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(14, 13, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 169, 126, 0.12);
+}
+
+.glass-panel-elevated {
+  background: rgba(21, 19, 16, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 169, 126, 0.18);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
+/* Sound Wave Animation */
+@keyframes soundwave {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.soundwave-bar {
+  animation: soundwave 1.2s ease-in-out infinite;
+  background-color: #c8a97e;
+  width: 2.5px;
+  border-radius: 2px;
+}
+.soundwave-bar:nth-child(2) { animation-delay: 0.2s; }
+.soundwave-bar:nth-child(3) { animation-delay: 0.4s; }
+.soundwave-bar:nth-child(4) { animation-delay: 0.1s; }
+.soundwave-bar:nth-child(5) { animation-delay: 0.3s; }
+
+/* Subtle Glow Vignette */
+.hero-vignette {
+  background: radial-gradient(circle at 50% 35%, rgba(200, 169, 126, 0.08) 0%, rgba(8, 7, 6, 0.4) 60%, #080706 100%);
+}
